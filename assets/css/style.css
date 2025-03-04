@@ -58,9 +58,11 @@ body{
     right: 0;
     height: 48px;
     background-color: rgb(233, 182, 89);
+    overflow: visible;
+    z-index: 1;
 }
 #nav{
-    display: inline-block;
+    display: inlin  e-block;
 }
 #nav li {
     display: inline-block;
@@ -72,18 +74,19 @@ body{
 
 #nav li a {
     color: rgb(255, 255, 255) ;
-    text-decoration: none;
     line-height: 48px;
     padding: 0px 24px ;
     font-family: Arial, sans-serif;
+    text-decoration: none;
 }
 
 #nav li:hover .subnav{
     cursor: pointer;
     display: block;
+
 }
 #nav > li:hover > a  {
-    display: inline-block;              
+    display:inline-block;              
     color: #333;
     background-color: #ffffff;
     text-transform: uppercase;
@@ -91,7 +94,7 @@ body{
 }
 
 #nav .subnav {
-    z-index: 30;
+    z-index: 2;
     display: none;
     position: absolute;
     background-color: rgb(233, 182, 89);
@@ -104,27 +107,49 @@ body{
 }
 
 #nav .subnav li:hover {
+    z-index: 3;
     color: #333 ;
     background-color: #ffffff;
     display: block;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #nav .subnav li:hover a{
-    color:#333
+    color:#333;
 }
 
+#header .mobile-menu-btn,
 #header .search-button{
     float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+
 }    
 
 #header .search-button a{
     text-decoration: none;
 }
+#header .mobile-menu-btn:hover{
+    cursor: pointer;
+    line-height: 46px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color:#333
+}
 #header > .search-button:hover{
     cursor: pointer;
-    line-height: 43px;
+    line-height: 43.5px;
     background-color: red;
 }
+#header .menu-icon{
+    color: #333;
+}
+#header .menu-icon,
 #header .search-icon{
     line-height: 46px;
     padding: 0 24px;
@@ -141,6 +166,7 @@ body{
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 #slider .text-content{
     position: absolute;
@@ -160,6 +186,7 @@ body{
 }
 .content-section{    
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0;
@@ -259,6 +286,9 @@ body{
     background-color: #fff;
     padding: 25px;  
     font-size: 15px;
+    height: 270px;
+    max-height: 100%;
+
 }
 .place-heading{
     margin-bottom: 4px;
@@ -293,9 +323,25 @@ body{
 
 }
 /* Footer-sectionsection */
-#footer {
- 
+#footer{
+        padding: 32px 16px;
+        text-align: center;
 }
+#footer .footer-icon {
+        font-size: 24px;
+}
+#footer .footer-icon a{
+        color: #ccc;
+        text-decoration: none;
+}
+#footer .footer-icon a:hover{
+        color: rgb(233, 182, 89);
+    }
+#footer .copyright{
+        font-size: 15px;
+        text-decoration: none;
+}
+
 /* Start overlay ticket */
 .modal{
     zoom: 0.85;
@@ -308,6 +354,7 @@ body{
     display: none;
     align-items: center;
     justify-content: center;
+
 }
 .modal-container{
     background: #fff;
@@ -419,26 +466,9 @@ body{
 .bg-chill img{
     background-position: fixed;
     width: 100%;
+    max-width: 100%;
 }
-#footer{
-    padding: 32px 16px;
-    text-align: center;
-    
-}
-#footer .footer-icon {
-    font-size: 24px;
-}
-#footer .footer-icon a{
-    color: #ccc;
-    text-decoration: none;
-}
-#footer .footer-icon a:hover{
-    color: rgb(233, 182, 89);
-}
-#footer .copyright{
-    font-size: 15px;
-    text-decoration: none;
-}
+
 /* Animated */
 @keyframes zoomIn {
     from {
@@ -450,3 +480,4 @@ body{
         transform: scale(1);
     }
 }
+

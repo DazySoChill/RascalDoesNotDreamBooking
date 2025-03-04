@@ -1,0 +1,129 @@
+/* Responsive - Pc */
+@media (min-width: 1024px){
+    #header .mobile-menu-btn{
+        display: none;
+    }
+}
+/* Responsive - Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    #content .content-section{    
+        padding: 0px 16px;
+    }
+    #content .about-content{
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 200px;
+    }
+    #header .mobile-menu-btn{
+        display: none;
+    }
+    .tour-section{
+        padding-bottom: 20px;
+    }
+    .tour-section .section-heading{
+        padding-top: 40px;
+    }
+    .search-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 48px;
+    }
+    .modal {
+        zoom: 0.75;
+    }
+}
+/* Resposive - Mobile */
+@media (max-width: 739px) {
+    #header{
+        overflow: hidden;
+    }
+    #nav {
+        display: block;
+    }
+    #nav > li {
+        display: block;
+    }
+    #nav .nav-arrow-down {
+        display: none;
+    }
+    #nav > li:hover > a {
+        width: 100%;
+    }
+    #nav > li:first-child {
+        display: inline-block;
+    }
+    #header .search-button{
+        display: none;
+    }
+    .mobile-full-width {    
+        width: 100% !important;
+    }
+    .about-content .member-list {
+        margin-top: 25px;
+        zoom: 1.3;
+    }
+    #slider{
+        text-align: center;
+        font-size: small;
+    }
+    #slider .text-heading,
+    #slider .text-description{
+        display: none;
+    }
+    #content .section-heading{
+        font-size: 19px;
+    }
+    #content .section-sub-heading{
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    #content .content-section{    
+        padding: 0px 16px;
+    }
+    #content .member-name{
+        margin-top: 15px;
+    }
+    #content .picture-size{
+        margin-top: 2px;
+        width: 160px;
+        height: 190px;
+    }
+    #content .section-heading {
+        padding-top: 48px;
+    }
+    .place-list .place-item {
+        margin-top: 16px;
+    }
+    .place-list .place-item:last-child{
+        margin-bottom: 32px;
+    }
+    
+    .tour-section .section-heading {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .tour-section .contact-content,
+    .tour-section .contact-form{
+        display: block;
+    }
+    .content-section{
+
+    }
+    .contact-info {
+        display: none;
+        padding-left: 20px;
+        font-size: 18px;
+        
+    }
+    #footer{
+        padding: 18px 9px;
+    }
+    #footer .footer-icon{
+        font-size: 18px;
+    }
+    #footer .copyright{
+        font-size: 10px;
+    }
+}
