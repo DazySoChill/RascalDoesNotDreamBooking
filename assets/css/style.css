@@ -62,7 +62,7 @@ body{
     z-index: 1;
 }
 #nav{
-    display: inlin  e-block;
+    display: inline-block;
 }
 #nav li {
     display: inline-block;
